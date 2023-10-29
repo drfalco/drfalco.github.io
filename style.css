@@ -303,6 +303,8 @@ letter-spacing:1px;}
 
 /*-------------------------LINKS-------------------------*/
 
+/*-------------------------LINKS-------------------------*/
+
 #header a:link, a:visited {
         color: #D8D6D8;
         text-decoration: none;
@@ -324,7 +326,7 @@ letter-spacing:1px;}
 }
 
 .contents a:link, .contents a:hover, .contents a:visited {
-        color: #006496;
+        color: #990000;
         text-decoration: none;
         font-weight: 200;
 }
@@ -332,6 +334,11 @@ letter-spacing:1px;}
 .top a:link, .top a:visited {color: #6E6B6E;
 	text-decoration: none;
 	font-weight: bold;}
+	
+
+.top a:hover {color: #11010E;
+	    background-color: #9F9B9F;
+		text-decoration: none;}
 	
 
 .top a:hover {color: #11010E;
