@@ -18,24 +18,15 @@
       color: #2c2c2c;
       background: #fafafa;
       padding: 2.5rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     #container {
       max-width: 660px;
       margin: 0 auto;
     }
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #333;
-      margin-bottom: 0.3rem;
-    }
-    .subtitle {
-      font-size: 0.95rem;
-      color: #777;
-      margin-bottom: 0;
-    }
+
+    /* Header */
     .header {
       display: flex;
       align-items: center;
@@ -51,10 +42,20 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .header-text { flex: 1; }
-    @media (max-width: 480px) {
-      .header { flex-direction: column; text-align: center; }
-      .header img { width: 120px; height: 120px; }
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #333;
+      margin-bottom: 0.3rem;
     }
+    .subtitle {
+      font-size: 0.95rem;
+      color: #777;
+    }
+
+    /* Sections */
     h2 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -66,48 +67,60 @@
       border-bottom: 1px solid #e8e8e8;
       padding-bottom: 0.3rem;
     }
-    p { margin-bottom: 0.8rem; }
-    a { color: #8b1a1a; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    p {
+      margin-bottom: 0.8rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+    a {
+      color: #8b1a1a;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover { color: #5a0f0f; }
+
+    /* Career */
     .career-item {
-      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 0.4rem;
     }
     .career-item .dates {
       font-size: 0.88rem;
       color: #888;
-      display: inline;
+      min-width: 6.5rem;
+      flex-shrink: 0;
     }
+
+    /* Links */
     .links {
       list-style: none;
       padding: 0;
     }
     .links li {
       display: inline;
-      margin-right: 0.4rem;
       font-size: 0.95rem;
     }
     .links li + li::before {
-      content: "\00b7\00a0";
+      content: "\2009\00b7\2009";
       color: #ccc;
-      margin-right: 0.4rem;
     }
-    .docs {
-      list-style: none;
-      padding: 0;
-    }
-    .docs li {
-      margin-bottom: 0.4rem;
-    }
-    .docs a::before {
-      content: "\2193\00a0";
-      font-size: 0.85rem;
-    }
+
+    /* Footer */
     footer {
       margin-top: 3rem;
       padding-top: 1rem;
       border-top: 1px solid #e8e8e8;
       font-size: 0.85rem;
       color: #aaa;
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .header { flex-direction: column; text-align: center; }
+      .header img { width: 120px; height: 120px; }
+      .career-item { flex-direction: column; gap: 0; }
+      .career-item .dates { min-width: auto; }
     }
   </style>
 </head>
@@ -129,10 +142,10 @@
 <p>My current research focuses on the lexical semantics of <em>half</em>-words (<em>met&agrave;</em>, <em>mezzo</em>, <em>half</em>): how grammar gates which partition readings are accessible and how common ground selects among them. This work, developed with Roberto Zamparelli, proposes an A&ndash;G partition framework that maps syntactic frames to reading families across Italian and English.</p>
 
 <h2>Career</h2>
-<div class="career-item"><span class="dates">2019&ndash;2023</span> &ensp;Marie Sk&#322;odowska-Curie Fellow, ZAS Berlin (SEMSUBSET, Horizon 2020)</div>
-<div class="career-item"><span class="dates">2022&ndash;2023</span> &ensp;Lecturer, Humboldt-Universit&auml;t zu Berlin</div>
-<div class="career-item"><span class="dates">2012&ndash;2014</span> &ensp;Postdoctoral Fellow, CIMeC, University of Trento</div>
-<div class="career-item"><span class="dates">2005&ndash;2010</span> &ensp;PhD in Linguistics, Scuola Normale Superiore, Pisa</div>
+<div class="career-item"><span class="dates">2019&ndash;2023</span><span>Marie Sk&#322;odowska-Curie Fellow, ZAS Berlin (SEMSUBSET, Horizon 2020)</span></div>
+<div class="career-item"><span class="dates">2022&ndash;2023</span><span>Lecturer, Humboldt-Universit&auml;t zu Berlin</span></div>
+<div class="career-item"><span class="dates">2012&ndash;2014</span><span>Postdoctoral Fellow, CIMeC, University of Trento</span></div>
+<div class="career-item"><span class="dates">2005&ndash;2010</span><span>PhD in Linguistics, Scuola Normale Superiore, Pisa</span></div>
 
 <h2>Links</h2>
 <ul class="links">
