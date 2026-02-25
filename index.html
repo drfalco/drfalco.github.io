@@ -34,13 +34,13 @@
     .subtitle {
       font-size: 0.95rem;
       color: #777;
-      margin-bottom: 2rem;
+      margin-bottom: 0;
     }
     .header {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.8rem;
     }
     .header img {
       width: 140px;
@@ -48,8 +48,13 @@
       border-radius: 50%;
       object-fit: cover;
       flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .header-text { flex: 1; }
+    @media (max-width: 480px) {
+      .header { flex-direction: column; text-align: center; }
+      .header img { width: 120px; height: 120px; }
+    }
     h2 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -78,8 +83,13 @@
     }
     .links li {
       display: inline;
-      margin-right: 1.2rem;
+      margin-right: 0.4rem;
       font-size: 0.95rem;
+    }
+    .links li + li::before {
+      content: "\00b7\00a0";
+      color: #ccc;
+      margin-right: 0.4rem;
     }
     .docs {
       list-style: none;
